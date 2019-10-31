@@ -3,12 +3,18 @@
 
 }
 
-h1 {
+html {
+    background-image: url(https://images.unsplash.com/photo-1527837730880-e99d8cfe46a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=938&q=80);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
 
+h1 {
     font-family: 'Fredericka the Great', sans-serif;
     font-size: 3em;
     text-align: center;
-    color: green;
+    color: black;
     padding: 1em 0em 1em 0em;
 }
 
@@ -20,6 +26,7 @@ form {
 input {
     border-radius: 1em;
     padding: 0.5em;
+    outline: none;
 }
 
 #add {
@@ -31,7 +38,7 @@ padding: 0.6em;
 border-radius: 0.5em;
 display: inline-block;
 transition: all 0.3s ease 0s;
-
+outline: none;
 }
 
 #add:hover {
@@ -51,8 +58,8 @@ transition: all 0.3s ease 0s;
 }
 
 .list {
-    background-color: lightgray;
-    margin: 0em 5em 0em 5em;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0em 10em 3em 10em;
     border-radius: 0.5em;
 }
 

@@ -39,5 +39,4 @@ app.get('/competitions', (req, res) => {
 //     .then(data => res.send(JSON.stringify(data)))
 // });
 
-
 app.listen(port, () => console.log('Server listening on port ' + port));

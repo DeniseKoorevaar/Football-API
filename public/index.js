@@ -31,7 +31,6 @@ $('#country').on('click', function () {
         dataType: 'json',
         success: function (res) {
             res.map(function (id) {
-                //console.log(id.league_name);
                 let competitions = document.createElement('li');
                 competitions.classList.add('display');
                 let competitionsText = document.createTextNode(id.league_name);
