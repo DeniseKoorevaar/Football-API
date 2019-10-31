@@ -21,19 +21,24 @@ $(function () {
     });
 });
 
-$(function () {
-    $('#country').on('click', function () {
-        $.ajax({
-            url: '/competitions/:id',
-            type: 'GET',
-            dataType: 'json',
-            success: function (res) {
-                res.map(function (id) {
-                    console.log(id.league_name);
-    
-                })
-    
-            }
-        })
-    })
-})
+$('#country').on('click', function () {
+    let id = countryId;
+    $.ajax({
+        url: `/competitions?id=${id}`,
+        type: 'GET',
+        dataType: 'json',
+        success: function (res) {
+            res.map(function (id) {
+                //console.log(id.league_name);
+                let competitions = document.createElement('li');
+                competitions.classList.add('display');
+                let competitionsText = document.createTextNode(id.league_name);
+                competitions.appendChild(competitionsText);
+
+                let bossUl = document.getElementById('competitions');
+                bossUl.appendChild(competitions);
+            })
+        }
+    });
+
+});

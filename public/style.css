@@ -3,6 +3,13 @@
 
 }
 
+h1 {
+    font-family: 'Fredericka the Great', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    color: green;
+}
+
 form {
     margin-top: 1em;
 }
