@@ -18,6 +18,8 @@ $(function () {
                 })
             }
         });
+        $('#country').empty();
+        $('#competitions').empty();
     });
 });
 
@@ -40,5 +42,4 @@ $('#country').on('click', function () {
             })
         }
     });
-
 });

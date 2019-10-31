@@ -4,12 +4,63 @@
 }
 
 h1 {
+
     font-family: 'Fredericka the Great', sans-serif;
     font-size: 3em;
     text-align: center;
     color: green;
+    padding: 1em 0em 1em 0em;
 }
 
 form {
     margin-top: 1em;
+    text-align: center;
+}
+
+input {
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+#add {
+border: none;
+background: black;
+color: #ffffff !important;
+font-weight: 100;
+padding: 0.6em;
+border-radius: 0.5em;
+display: inline-block;
+transition: all 0.3s ease 0s;
+
+}
+
+#add:hover {
+color: black !important;
+font-weight: 700 !important;
+letter-spacing: 0.1em;
+background: none;
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.3s ease 0s;
+}
+
+#country {
+    text-align: left;
+    margin: 2em 0em 2em 2em;
+    text-transform: uppercase;
+}
+
+.list {
+    background-color: lightgray;
+    margin: 0em 5em 0em 5em;
+    border-radius: 0.5em;
+}
+
+#competitions {
+    text-align: center;
+    list-style-type: none;
+}
+
+.display {
+    padding: 1em 0em 0.5em 0em;
 }
