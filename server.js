@@ -34,9 +34,10 @@ app.get('/competitions', (req, res) => {
 // });
 
 // app.get('/standings', (req, res) => {
-//     fetch('https://apiv2.apifootball.com/?action=get_standings&league_id=148&APIkey=00622ffc4e658e817b2bb7784792054a440bfa0ed9d383619ff21f748dc9dcc3')
-//     .then(response => response.json())
-//     .then(data => res.send(JSON.stringify(data)))
+//     let leagueId = req.query.id;
+//     fetch(`https://apiv2.apifootball.com/?action=get_standings&league_id=${leagueId}&APIkey=00622ffc4e658e817b2bb7784792054a440bfa0ed9d383619ff21f748dc9dcc3`)
+//         .then(response => response.json())
+//         .then(data => res.send(JSON.stringify(data)))
 // });
 
 app.listen(port, () => console.log('Server listening on port ' + port));

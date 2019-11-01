@@ -1,4 +1,5 @@
 let countryId;
+// let value = document.getElementById('item');
 document.getElementById('country').hidden = true;
 
 $(() => {
@@ -12,9 +13,9 @@ $(() => {
                 res.map((country) => {
                     if (value === country.country_name) {
                         countryId = country.country_id;
-                        let p = document.getElementById('country');
+                        let btn = document.getElementById('country');
                         let countryText = document.createTextNode(country.country_name);
-                        p.appendChild(countryText);
+                        btn.appendChild(countryText);
                         document.getElementById('country').hidden = false;
                     }
                 })
@@ -22,8 +23,10 @@ $(() => {
         });
         $('#country').empty();
         $('#competitions').empty();
+        $('item').value = '';
     });
 });
+
 
 $('#country').on('click', () => {
     let id = countryId;
@@ -44,3 +47,20 @@ $('#country').on('click', () => {
         }
     });
 });
+
+// function getCountries() {
+//     fetch('/countries',
+//         { method: 'GET' }
+//     )
+//         .then(response => response.json())
+//         .then(json => json.forEach((country) => {
+//             if (value.value === country.country_name) {
+//                 countryId = country.country_id;
+//                 let p = document.getElementById('country');
+//                 let countryText = document.createTextNode(country.country_name);
+//                 p.appendChild(countryText);
+//                 document.getElementById('country').hidden = false;
+//                 document.getElementById('item').value = '';
+//             }
+//         }))
+// }
