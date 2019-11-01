@@ -1,19 +1,21 @@
 let countryId;
+document.getElementById('country').hidden = true;
 
-$(function () {
-    $('#add').on('click', function () {
+$(() => {
+    $('#add').on('click', () => {
         let value = document.getElementById('item').value;
         $.ajax({
             url: '/countries',
             type: 'GET',
             dataType: 'json',
-            success: function (res) {
-                res.map(function (country) {
+            success: (res) => {
+                res.map((country) => {
                     if (value === country.country_name) {
                         countryId = country.country_id;
                         let p = document.getElementById('country');
                         let countryText = document.createTextNode(country.country_name);
                         p.appendChild(countryText);
+                        document.getElementById('country').hidden = false;
                     }
                 })
             }
@@ -23,14 +25,14 @@ $(function () {
     });
 });
 
-$('#country').on('click', function () {
+$('#country').on('click', () => {
     let id = countryId;
     $.ajax({
         url: `/competitions?id=${id}`,
         type: 'GET',
         dataType: 'json',
-        success: function (res) {
-            res.map(function (id) {
+        success: (res) => {
+            res.map((id) => {
                 let competitions = document.createElement('li');
                 competitions.classList.add('display');
                 let competitionsText = document.createTextNode(id.league_name);

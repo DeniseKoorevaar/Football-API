@@ -52,9 +52,12 @@ transition: all 0.3s ease 0s;
 }
 
 #country {
+    color: white;
+    background-color: black;
     text-align: left;
-    margin: 2em 0em 2em 2em;
+    margin: 2em 28em 2em 2em;
     text-transform: uppercase;
+    border-radius: 1em;
 }
 
 .list {
